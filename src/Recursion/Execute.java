@@ -1,8 +1,13 @@
 package Recursion;
 
+import java.util.ArrayList;
+
 public class Execute {
     public static void main(String[] args) {
         Recursion f=new Recursion();
-        System.out.println(f.sod(5555));
+        int[] arr=new int[]{8,4};
+
+        f.combinationSum(arr,0,12,new ArrayList<Integer>());
+
     }
 }
