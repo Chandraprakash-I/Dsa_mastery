@@ -11,7 +11,7 @@ public class ArrayInversion {
                 left++;
             }else{
                 temp[index++]=arr[right];
-                count=count+(mid-left+1);
+                count+=(mid-left+1);
                 right++;
             }
         }
@@ -23,9 +23,7 @@ public class ArrayInversion {
             temp[index++]=arr[right];
             right++;
         }
-        for(int i=0; i<temp.length; i++){
-            arr[i]=temp[i];
-        }
+        System.arraycopy(temp, 0, arr, 0, temp.length);
 
     }
     public void mergeSort(int[] arr,int low,int high){
@@ -45,7 +43,7 @@ public class ArrayInversion {
         System.out.println(count);
     }
     public static void main(String[] args) {
-        int[] arr=new int[]{5,4};
+        int[] arr=new int[]{5,4,3,2,1};
         ArrayInversion a=new ArrayInversion();
         a.inverse(arr);
     }

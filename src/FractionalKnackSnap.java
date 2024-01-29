@@ -8,7 +8,7 @@ class Item{
         this.weight=weight;
     }
 }
-public class FractionalKnackSnap {
+public class  FractionalKnackSnap {
 
     public void maxValue(int[] values,int[] weight,int w){
         Item[] arr=new Item[values.length];
