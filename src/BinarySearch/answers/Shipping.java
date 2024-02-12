@@ -46,8 +46,8 @@ public class Shipping {
     }
     public static void main(String[] args) {
         Shipping s=new Shipping();
-        int [] arr=new int[]{5,4,5,2,3,4,5,6};
-        System.out.println(s.findWeight(arr,5));
+        int [] arr=new int[]{1,2,3,4,5,6,7,8,9,10};
+        System.out.println(s.findWeight(arr,1));
     }
 
 }

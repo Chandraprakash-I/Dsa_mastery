@@ -23,8 +23,6 @@ public class KoKoEatingBannanas {
                 high=mid-1;
             } else if(totalHours>h){
                 low=mid+1;
-            }else{
-                high=mid-1;
             }
         }
         System.out.print(ans);

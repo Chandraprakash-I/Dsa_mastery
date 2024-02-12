@@ -2,6 +2,16 @@ package Strings.easy;
 
 public class Palindrome {
 
+    public boolean palindromeWord(String word){
+        String reverse="";
+        for(int i=word.length()-1; i>=0; i--){
+            reverse+=word.charAt(i);
+        }
+        if(reverse.equals(word)){
+            return true;
+        }
+        return false;
+    }
     public void find(String s){
         int end=s.length()-1;
         String ans="";
@@ -20,6 +30,6 @@ public class Palindrome {
     }
     public static void main(String[] args) {
         Palindrome p=new Palindrome();
-        p.find("this is an amazing program");
+        System.out.println(p.palindromeWord("amaa"));
     }
 }
