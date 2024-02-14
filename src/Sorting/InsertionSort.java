@@ -12,8 +12,9 @@ public class InsertionSort {
 
 
             for(int j=0; j<arr.length; j++){
-                while(j>0 && arr[j]<arr[j-1]){
+                while(j>0 && arr[j-1]>arr[j]){
                     swap(arr,j,j-1);
+                    j--;
                 }
             }
 
