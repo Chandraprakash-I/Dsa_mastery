@@ -1,3 +1,5 @@
+package LinkedList.hard;
+
 import Recursion.Node;
 
 public class FlattenLinkedList {

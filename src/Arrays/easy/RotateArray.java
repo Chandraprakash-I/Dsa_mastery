@@ -2,6 +2,21 @@ package Arrays.easy;
 
 public class RotateArray {
 
+    public int[] usingBruteForce(int[] arr,int k){
+        k=k%arr.length;
+        int[] temp=new int[arr.length];
+        int j=0;
+        int w=arr.length-k;
+        for(int i=w; i<arr.length; i++){
+            temp[j]=arr[i];
+            j++;
+        }
+        for(int i=0; i<w; i++){
+            temp[j]=arr[i];
+            j++;
+        }
+        return temp;
+    }
     public void reverse(int[] arr,int left,int right){
         while(left<right){
             int temp=arr[left];
@@ -26,7 +41,7 @@ public class RotateArray {
     }
     public static void main(String[] args) {
         RotateArray r=new RotateArray();
-        for(int i:r.rotateArray(new int[]{1,2,3},6)){
+        for(int i:r.usingBruteForce(new int[]{1,2,3,4,5,6,7},2)){
             System.out.print(i);
         }
     }

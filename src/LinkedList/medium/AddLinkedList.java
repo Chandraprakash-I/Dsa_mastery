@@ -1,3 +1,5 @@
+package LinkedList.medium;
+
 import Recursion.Node;
 
 public class AddLinkedList {

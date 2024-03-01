@@ -1,3 +1,5 @@
+package LinkedList.hard;
+
 import Recursion.Node;
 
 public class RotateLinkList {
@@ -30,12 +32,10 @@ public class RotateLinkList {
         Node one=new Node(1);
         Node two=new Node(2);
         Node three=new Node(3);
-        Node four=new Node(4);
-        Node five=new Node(5);
+
         one.next=two;
         two.next=three;
-        three.next=four;
-        four.next=five;
+
 
         RotateLinkList r=new RotateLinkList();
         r.rotate(one,5);

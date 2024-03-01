@@ -1,3 +1,5 @@
+package LinkedList.medium;
+
 import Recursion.Node;
 
 public class ReverseLinkedList {
@@ -16,6 +18,18 @@ public class ReverseLinkedList {
             prev=prev.next;
         }
     }
+    public void print(Node head){
+        while(head!=null){
+            System.out.println(head.data);
+            head=head.next;
+        }
+    }
+    public Node reverseRecursively(Node current,Node previous){
+        if(current==null)return previous;
+        Node next=current.next;
+        current.next=previous;
+        return reverseRecursively(next,current);
+    }
     public static void main(String[] args) {
         Node head=new Node(1);
         Node two=new Node(2);
@@ -23,7 +37,7 @@ public class ReverseLinkedList {
         head.next=two;
         two.next=three;
         ReverseLinkedList r=new ReverseLinkedList();
-        r.reverse(head);
+        r.print(r.reverseRecursively(head,null));
 
     }
 }

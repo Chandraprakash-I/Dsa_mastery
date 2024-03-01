@@ -1,3 +1,5 @@
+package LinkedList.medium;
+
 import Recursion.Node;
 
 public class RemoveNthNode {
@@ -24,6 +26,41 @@ public class RemoveNthNode {
             start=start.next;
         }
     }
+    public Node bruteForce(Node head,int n){
+
+
+        if (head == null || n <= 0) {
+            return null; // Handle invalid input or edge cases
+        }
+
+        Node temp=head;
+        int length=0;
+        while(temp!=null){
+            temp=temp.next;
+            length++;
+        }
+        System.out.println("length : "+length);
+        if(n>length){
+            return null;
+        }
+        int cnt=length-n-1;
+        temp=head;
+        System.out.println("count: "+cnt);
+        while(cnt>0){
+            cnt--;
+            temp=temp.next;
+        }
+        Node ans=temp.next;
+        temp.next=temp.next.next;
+        return head;
+    }
+
+    public void print(Node head){
+        while(head!=null){
+            System.out.println(head.data);
+            head=head.next;
+        }
+    }
     public static void main(String[] args) {
         Node one=new Node(1);
         Node two=new Node(3);
@@ -36,6 +73,6 @@ public class RemoveNthNode {
         four.next=five;
 
         RemoveNthNode r=new RemoveNthNode();
-        r.remove(one,5);
+        r.print(r.bruteForce(one,3));
     }
 }

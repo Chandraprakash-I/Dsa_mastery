@@ -1,4 +1,8 @@
+package LinkedList.medium;
+
 import Recursion.Node;
+
+import java.util.HashMap;
 
 public class DetectCycle {
 
@@ -15,6 +19,8 @@ public class DetectCycle {
             }
         }
     }
+
+
     public static void main(String[] args) {
         Node one=new Node(1);
         Node two=new Node(3);
@@ -25,7 +31,7 @@ public class DetectCycle {
         two.next=three;
         three.next=four;
         four.next=five;
-        five.next=one;
+        five.next=two;
 
         DetectCycle c=new DetectCycle();
         c.detectCycle(one);

@@ -1,3 +1,5 @@
+package Arrays.easy;
+
 public class RemoveDuplicatesFromSortedArray {
 
     public void remove(int[] arr){

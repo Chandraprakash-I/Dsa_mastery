@@ -1,7 +1,8 @@
+package LinkedList.medium;
+
 import Recursion.Node;
 
-public class
-InterSectionPoint {
+public class InterSectionPoint {
 
     public void findInterSection(Node head,Node head2){
         Node a=head;
