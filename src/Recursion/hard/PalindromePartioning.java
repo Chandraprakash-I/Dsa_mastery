@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.hard;
 
 import java.util.ArrayList;
 
@@ -6,11 +6,10 @@ public class PalindromePartioning {
 
     public boolean isPalindrome(String word ,int start,int end){
         while(start<=end){
-            if(word.charAt(start)!=word.charAt(end)){
+            if(word.charAt(start++)!=word.charAt(end--)){
                 return  false;
             }
-            start++;
-            end--;
+
         }
 
         return true;
@@ -31,7 +30,7 @@ public class PalindromePartioning {
     public static void main(String[] args) {
         PalindromePartioning p=new PalindromePartioning();
         ArrayList<ArrayList<String>> ans=new ArrayList<>();
-        p.doIt("aabb",0,ans,new ArrayList<String>());
+        p.doIt("amma",0,ans,new ArrayList<String>());
         for(ArrayList<String> s: ans){
             System.out.print(s);
         }
