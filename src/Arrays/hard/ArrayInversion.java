@@ -1,3 +1,5 @@
+package Arrays.hard;
+
 public class ArrayInversion {
     int count=0;
     public void merge(int[] arr,int low ,int mid){
