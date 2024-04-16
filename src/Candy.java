@@ -11,27 +11,25 @@ public class Candy {
         }
         int[] ans=new int[n];
         Arrays.fill(ans, 1);
+        for(int i=0; i<ratings.length; i++){
+            if((i==n-1||ratings[i]>ratings[i+1]) && (i==0||ratings[i]>ratings[i-1])){
+                ans[i]=ans[i]+1;
+            }else if((i==n-1||ratings[i]<ratings[i+1] ) && (i==0|| ratings[i]>ratings[i-1])){
+                if(i!=0 && i!=n-1){
+                    ans[i]=ans[i]+1;
+                    ans[i+1]=ans[i+1]+2;
+                }
 
-        for(int i=0; i<n; i++){
-            if(i==0){
-                if(ratings[i]>ratings[i+1]){
-                    ans[i]+=1;
+            }else if((i==n-1||ratings[i]>ratings[i+1]) && (i==0||ratings[i]<ratings[i-1])){
+                if(i!=0 && i!=n-1){
+                    ans[i]=ans[i]+1;
+                    ans[i-1]=ans[i-1]+2;
                 }
-            } else if (i==n-1) {
-                if(ratings[i]>ratings[i-1]){
-                    ans[i]+=1;
-                }
-            }else{
-                if(ratings[i]>=ratings[i+1] && ratings[i]>=ratings[i-1]){
-                    ans[i]+=1;
-                }
+
             }
         }
-        int sum=0;
-        for(int a:ans){
-            sum+=a;
-        }
-        System.out.println(sum);
+        System.out.println(Arrays.toString(ans));
+
     }
     public static void main(String[] args) {
         Candy c=new Candy();

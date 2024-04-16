@@ -1,3 +1,5 @@
+package StacksAndQueues.MonotanicStack;
+
 public class TrappingRainWater {
 
     public void optimalApproach(int[] arr){

@@ -26,6 +26,6 @@ public class RemoveOuterMostParanthesis {
     }
     public static void main(String[] args) {
         RemoveOuterMostParanthesis p=new RemoveOuterMostParanthesis();
-        System.out.println(p.remove("(()())(())"));
+        System.out.println(p.remove("(()())()"));
     }
 }
