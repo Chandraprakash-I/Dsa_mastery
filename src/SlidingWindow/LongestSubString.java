@@ -5,7 +5,19 @@ import java.util.HashMap;
 public class LongestSubString {
 
     public void useBruteForce(String s){
-
+        int maxCount=0;
+        for(int i=0; i<s.length(); i++){
+            String temp=""+s.charAt(i);
+            for(int j=i+1; j<s.length(); j++){
+                if(!temp.contains(""+s.charAt(j))){
+                    temp+=s.charAt(j);
+                    continue;
+                }
+                maxCount=Math.max(temp.length(),maxCount);
+                break;
+            }
+        }
+        System.out.println(maxCount);
     }
 
     public void use2Pointer(String  s){
@@ -27,6 +39,6 @@ public class LongestSubString {
     }
     public static void main(String[] args) {
         LongestSubString l=new LongestSubString();
-        l.use2Pointer("asda");
+        l.useBruteForce("asaa");
     }
 }
